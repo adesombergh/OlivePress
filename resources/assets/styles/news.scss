@@ -1,0 +1,72 @@
+.news {
+    width: 66%;
+    @media screen and (max-width: $break-medium) {
+        width:80%;
+    }
+    @media screen and (max-width: $break-small) {
+        width: 100%;
+    }
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    .item {
+        figure {
+            margin-bottom: 0;
+            img {
+                width: 100%;
+                height: auto;
+            }
+            figcaption {
+                font-family: 'Encode Sans Semi Expanded', sans-serif;
+                font-weight: 400;            
+                padding: 21px 5%;
+                font-size: 2vw;
+                line-height: 2vw;
+                @media screen and (max-width: $break-small) {
+                    font-size: .7rem;
+                    line-height: .7rem;
+                }
+                p {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;                
+                    margin: 0;
+                    padding-top: 5%;
+                    font-size: 1vw;
+                    @media screen and (max-width: $break-small) {
+                        font-size: .7rem;
+                        line-height: .7rem;
+                    }
+                }
+            }
+        }
+        &.big {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            figure {
+                figcaption {
+                    font-size: 3vw;
+                    line-height: 3vw;
+                    p {
+                        font-size: 1.5vw;
+                        @media screen and (max-width: $break-small) {
+                            font-size: .7rem;
+                            line-height: .7rem;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover a {
+            color: #fff;
+        }
+        &:hover{
+            background-color: #000;
+        }
+        &:first-child:hover{
+            background-color: $red;
+        }
+    }
+}

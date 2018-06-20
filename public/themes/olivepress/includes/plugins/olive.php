@@ -16,3 +16,4 @@ declare(strict_types=1);
 
 // Disable sidebar menu items.
 add_theme_support('olive-custom-post-types');
+add_theme_support('olive-custom-fields');

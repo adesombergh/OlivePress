@@ -1,0 +1,60 @@
+header {
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
+    font-weight: 400;
+    position: relative;
+    padding-top: 21px;
+    .logo {
+        margin: 0 auto;
+        width: 85px;
+        margin-bottom: 21px;
+    }
+    .links {
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            li {
+                display: inline-block;
+                a:hover span {
+                    color:#fff;
+                }
+                a:hover.about{
+                    color:blue;
+                }
+                a:hover.follow{
+                    color:red;
+                }
+                a:hover.shop{
+                    color:green;
+                }
+            }
+        }
+        &.links-left > ul {
+            margin-left: 21px;
+            position: absolute;
+            left: 0;
+        }
+        &.links-right > ul {
+            width: 130px;
+            margin-right: 21px;
+            position: absolute;
+            right: 0;
+        }
+        &.links-center ul {
+            margin: 0 auto;
+            width: 300px;
+            padding: 21px 7px;
+            border-bottom: 1px solid #020202;
+        }
+    }
+    .dropdown-menu {
+        ul {
+            display: block;
+            li {
+                display: block;
+                text-align: right;
+            }
+        }
+    }
+}

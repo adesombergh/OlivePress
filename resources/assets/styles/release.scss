@@ -1,0 +1,58 @@
+.release {
+    font-size: 21px;
+
+    .pochette {
+        margin: 140px auto;
+        width: 50%;
+    }
+    h2 {
+        text-align: center;
+        font-size: 4vw;
+        font-family: 'Encode Sans Semi Expanded', sans-serif;
+        font-weight: 800;
+        margin: 140px auto;
+    }
+    .morceaux {
+        margin: 140px auto;
+        text-align: center;
+        ol {
+            display: inline-block;
+        }
+    }
+    .extras {
+        margin: 140px auto;
+    }
+    .buy {
+        margin: 140px auto;
+        text-align: center;
+        h3 {
+            font-family: 'Encode Sans Semi Expanded', sans-serif;
+            font-size: 4vw;
+        }
+        ul {
+            display: inline-block;
+            li {
+                display: inline-block;
+                &:not(:last-child):after {
+                    content: "-";
+                    margin: 0 20px;
+                }
+            }
+        }
+    }
+    .big-button{
+        margin: 140px auto;
+        text-align: center;
+        a {
+            padding: 50px;
+            font-size: 4vw;
+            font-weight: 700;
+            border: 2px solid #000;
+            &:hover {
+                border: 2px solid #fff;
+                color: #fff;
+                background-color: #000;
+            }
+        }
+    }
+}

@@ -1,1 +1,48 @@
-/* WordPlate */
+@import "variables";
+@import "~bulma";
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:400,800|Roboto:200,300,400,700');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #020202;
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+  font-weight: 200;
+  line-height: $line-height-base;
+  box-sizing: border-box;
+}
+
+a {
+  color: #020202;
+  text-decoration: none;
+  &:hover {
+    color: #020202;
+    text-decoration: none;
+  }
+}
+
+main {
+  margin: 42px auto 42px auto;
+  &.container{
+    padding: 0;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 21px;
+  p {
+    margin: 0;
+  }
+}
+
+@import 'header';
+@import 'news';
+@import 'artists';
+@import 'artist';
+@import 'releases';
+@import 'release';
+@import 'about';

@@ -10,13 +10,18 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "dependencies": {
+        "bulma": "^0.7.1",
         "cross-env": "^5.1.6",
         "dotenv": "^6.0.0",
         "laravel-mix": "^2.1.11"
     },
     "browserslist": [
-      ">0.25%",
-      "not ie 11",
-      "not op_mini all"
-    ]
+        ">0.25%",
+        "not ie 11",
+        "not op_mini all"
+    ],
+    "devDependencies": {
+        "browser-sync": "^2.24.4",
+        "browser-sync-webpack-plugin": "^2.0.1"
+    }
 }

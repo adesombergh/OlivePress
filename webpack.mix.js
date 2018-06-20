@@ -13,12 +13,30 @@ require('dotenv').config();
  |
  */
 
-const theme = process.env.WP_THEME;
+const resources = 'resources/assets';
+const themePath = 'public/themes/olivepress';
+const assetsPath = `${themePath}/assets`;
 
+mix.setPublicPath(assetsPath);
 mix.setResourceRoot('../');
-mix.setPublicPath(`public/themes/${theme}/assets`);
 
-mix.js('resources/assets/scripts/app.js', 'scripts');
-mix.sass('resources/assets/styles/app.scss', 'styles');
+mix.browserSync({
+    proxy: 'http://olive.press',
+    files: [
+        `${themePath}/**/*.php`,
+        `${assetsPath}/**/*.js`,
+        `${assetsPath}/**/*.css`
+    ]
+});
+
+mix.js(`${resources}/scripts/app.js`, `${assetsPath}/scripts`);
+
+mix.sass(`${resources}/styles/app.scss`, `${assetsPath}/styles`, {
+    includePaths: ['node_modules']
+});
+
+// mix.sass(`${resources}/styles/editor-style.scss`, `${assetsPath}/styles`, {
+//     includePaths: ['node_modules']
+// });
 
 mix.version();
