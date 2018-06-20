@@ -20,7 +20,11 @@
             <h3>upcoming shows</h3>
             <ul class="shows">
                 @foreach ($the_shows as $show)
-                <li class="too-late">{{ $show['when'] }}: {{ $show['where'] }}</li>
+                    @if ($show['too-late'])
+                        <li class="too-late">{{ $show['when'] }}: {{ $show['where'] }}</li>
+                    @else
+                        <li>{{ $show['when'] }}: {{ $show['where'] }}</li>
+                    @endif
                 @endforeach
             </ul>
             <div class="booking">
