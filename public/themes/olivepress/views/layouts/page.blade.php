@@ -17,7 +17,7 @@
             <nav class="links links-left">
                 <ul>
                     <li>
-                        <a href="#" class="shop">SHOP</a>
+                        <a href="{{ home_url() }}" class="shop">SHOP</a>
                     </li>
                 </ul>
             </nav>
@@ -25,7 +25,7 @@
             <nav class="links links-right">
                 <ul>
                     <li>
-                        <a href="" class="about">ABOUT</a>
+                        <a href="{{ home_url('/about') }}" class="about">ABOUT</a>
                     </li>
 
                     <li>
@@ -51,13 +51,13 @@
             <nav class="links links-center">
                 <ul>
                     <li>
-                        <a href="">N<span>E</span>WS</a>
+                        <a href="{{ home_url('news') }}">N<span>E</span>WS</a>
                     </li>
                     <li>
-                        <a href=""><span>A</span>RT<span>I</span>STS</a>
+                        <a href="{{ home_url('artist') }}"><span>A</span>RT<span>I</span>STS</a>
                     </li>
                     <li>
-                        <a href="">R<span>E</span>L<span>EA</span>S<span>E</span>S</a>
+                        <a href="{{ home_url('release') }}">R<span>E</span>L<span>EA</span>S<span>E</span>S</a>
                     </li>
                 </ul>
             </nav>
@@ -68,7 +68,7 @@
         </main>
 
         <footer>
-            <a href="/">OLIVE NOIRE</a>
+            <a href="{{ home_url() }}">OLIVE NOIRE</a>
         </footer>
     </div>
 

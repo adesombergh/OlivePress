@@ -46,3 +46,19 @@ add_action('wp_enqueue_scripts', function () {
 add_filter('jpeg_quality', function () {
     return 100;
 }, 10, 2);
+
+
+/**
+ * Add fonts to the "Font Family" drop-down.
+ */
+add_filter( 'tiny_mce_before_init', 'fb_mce_before_init' );
+
+function fb_mce_before_init( $settings ) {
+    $font_formats = 'Roboto=Roboto,helvetica,arial, sans-serif;'
+                  . 'Encode Sans Semi Expanded=Encode Sans Semi Expanded, sans-serif;';
+    $settings[ 'font_formats' ] = $font_formats;
+    return $settings;
+}
+
+
+

@@ -3,20 +3,23 @@
 @section('content')
 <div class="container artist">
     <div class="description">
-        {!! $free_zone1 !!}
+        {!! do_shortcode($free_zone1) !!}
     </div>
     <div class="columns details">
         <div class="column is-3">
             <div class="square">
                 <h2>{{ $the_title }}</h2>
+                @if($the_socials)
                 <ul class="socials">
                     @foreach ($the_socials as $social)
                     <li><a href="{{ $social['url'] }}">{{ $social['title'] }}</a></li>
                     @endforeach
                 </ul>
+                @endif
                 <div class="vertical-bar"></div>
                 <div class="horizontal-bar"></div>
             </div>
+            @if($the_shows)
             <h3>upcoming shows</h3>
             <ul class="shows">
                 @foreach ($the_shows as $show)
@@ -27,10 +30,9 @@
                     @endif
                 @endforeach
             </ul>
-            <div class="booking">
-                <a href="#">BOOKING</a>
-                <p>{{ $the_email }}</p>
-            </div>
+            @endif
+            <booking-button address="{{ $the_email }}"></booking-button>
+
         </div>
         <div class="column is-9">
             <div class="text-2" style="text-align:center;">
@@ -41,7 +43,18 @@
     <div class="separator">
         <div class="black-bar"></div>
     </div>
-    {{-- <div class="extras">
+    @if($the_extras)
+    <div class="extras">
+        <div class="columns">
+            @foreach($the_extras as $extra)
+            <article class="column">
+                {!! wp_oembed_get( $extra ) !!}
+            </article>
+            @endforeach
+        </div>
+    <div>
+    @endif
+    {{--  <div class="extras">
         <div class="tile is-ancestor">
             <div class="tile is-vertical">
                 <div class="tile">
@@ -110,23 +123,19 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>  --}}
+    @if($the_releases)
     <div class="releases-artist">
         <h3>RELEASES</h3>
         <div class="releases">
-            <a href="">
-                <div class="img"><img src="{{ asset('images/unnamed.jpg') }}" alt="alt"></div>
-                <p class="caption">unnamed</p>
+            @foreach($the_releases as $release)
+            <a href="{{ $release['the_link'] }}">
+                <div class="img"><img src="{{ $release['the_pochette'] }}" alt="alt"></div>
+                <p class="caption">{{ $release['the_title'] }}</p>
             </a>
-            <a href="">
-                <div class="img"><img src="{{ asset('images/apex.jpg') }}" alt="alt"></div>
-                <p class="caption">‘’APEX’’</p>
-            </a>
-            <a href="">
-                <div class="img"><img src="{{ asset('images/unnamed.jpg') }}" alt="alt"></div>
-                <p class="caption">unnamed</p>
-            </a>
+            @endforeach
         </div>
     </div>
+    @endif
 </div>
 @endsection

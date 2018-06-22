@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:400,800|Roboto:200,300,400,700);/*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
+
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  color: #020202;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 200;
+  line-height:  1.6;
+  box-sizing: border-box;
+}
+
+a {
+  color: #020202;
+  text-decoration: underline;
+  text-decoration-line: dotted;
+}
+
+a:hover {
+  color: #020202;
+  text-decoration-line: line;
+}
