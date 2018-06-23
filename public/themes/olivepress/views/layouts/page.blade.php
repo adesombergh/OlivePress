@@ -17,7 +17,7 @@
             <nav class="links links-left">
                 <ul>
                     <li>
-                        <a href="{{ home_url() }}" class="shop">SHOP</a>
+                        <a href="#" class="shop">SHOP</a>
                     </li>
                 </ul>
             </nav>
@@ -68,7 +68,7 @@
         </main>
 
         <footer>
-            <a href="{{ home_url() }}">OLIVE NOIRE</a>
+            <a href="{{ home_url() }}" id="the-olive">OLIVE NOIRE</a>
         </footer>
     </div>
 

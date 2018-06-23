@@ -61,4 +61,30 @@ function fb_mce_before_init( $settings ) {
 }
 
 
+function customize_admin_bar( $wp_admin_bar ) {
+    $wp_admin_bar->remove_node( 'my-account' );
+    $args = array(
+        'id'     => 'logout',           // id of the existing child node (New > Post)
+        'title'  => 'Se déconnecter',   // alter the title of existing node
+        'parent' => 'top-secondary',    // set parent
+    );
+    $wp_admin_bar->add_node( $args );
+}
+if (!current_user_can('administrator')){
+    add_action( 'admin_bar_menu', 'customize_admin_bar', 999 );
+}
 
+
+
+
+function disable_new_posts($a) {
+    if (current_user_can('artiste')){
+        global $submenu;
+        unset($submenu['edit.php?post_type=artist'][10]);
+        // Hide link on listing page
+        echo '<style type="text/css">
+        .page-title-action { display:none; }
+        </style>';
+    }
+}
+add_action('admin_menu', 'disable_new_posts');

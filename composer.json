@@ -28,7 +28,8 @@
         "installer-paths": {
             "public/mu-plugins/{$name}": [
               "type:wordpress-muplugin",
-              "wordplate/plate"
+              "wordplate/plate",
+              "ekandreas/bladerunner"
             ],
             "public/plugins/{$name}": ["type:wordpress-plugin"],
             "public/themes/{$name}": ["type:wordpress-theme"]

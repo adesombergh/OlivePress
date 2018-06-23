@@ -4,6 +4,9 @@
 <div class="container artist">
     <div class="description">
         {!! do_shortcode($free_zone1) !!}
+        <div class="text-1-footer">
+            <div class="black-bar"></div>
+        </div>
     </div>
     <div class="columns details">
         <div class="column is-3">
@@ -35,7 +38,7 @@
 
         </div>
         <div class="column is-9">
-            <div class="text-2" style="text-align:center;">
+            <div class="text-2">
                 {!! $free_zone2 !!}
             </div>
         </div>
@@ -43,7 +46,7 @@
     <div class="separator">
         <div class="black-bar"></div>
     </div>
-    @if($the_extras)
+    {{-- @if($the_extras)
     <div class="extras">
         <div class="columns">
             @foreach($the_extras as $extra)
@@ -53,8 +56,7 @@
             @endforeach
         </div>
     <div>
-    @endif
-    {{--  <div class="extras">
+    @endif <div class="extras">
         <div class="tile is-ancestor">
             <div class="tile is-vertical">
                 <div class="tile">

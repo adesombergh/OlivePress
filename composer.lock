@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3277802e9df447b0f37d73087de83b36",
+    "content-hash": "f539624250a3e21df6d01652d7d738ca",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -304,7 +304,7 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v5.6.25",
+            "version": "v5.6.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -348,7 +348,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v5.6.25",
+            "version": "v5.6.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -392,7 +392,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.6.25",
+            "version": "v5.6.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -436,7 +436,7 @@
         },
         {
             "name": "illuminate/events",
-            "version": "v5.6.25",
+            "version": "v5.6.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -481,7 +481,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v5.6.25",
+            "version": "v5.6.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -533,16 +533,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v5.6.25",
+            "version": "v5.6.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "192a3c3690a90467974f547ff648899679a4243c"
+                "reference": "b6de0557cb34ebbbdfbd59a0c97009cf4f7f21aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/192a3c3690a90467974f547ff648899679a4243c",
-                "reference": "192a3c3690a90467974f547ff648899679a4243c",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/b6de0557cb34ebbbdfbd59a0c97009cf4f7f21aa",
+                "reference": "b6de0557cb34ebbbdfbd59a0c97009cf4f7f21aa",
                 "shasum": ""
             },
             "require": {
@@ -587,11 +587,11 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2018-06-12T14:37:15+00:00"
+            "time": "2018-06-18T16:10:24+00:00"
         },
         {
             "name": "illuminate/view",
-            "version": "v5.6.25",
+            "version": "v5.6.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
@@ -1789,16 +1789,16 @@
         },
         {
             "name": "wordplate/plate",
-            "version": "4.0.2",
+            "version": "4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wordplate/plate.git",
-                "reference": "fd2e50cd3de67e90391e856f82ac10e8e7ae7686"
+                "reference": "4ed5ab1207cd6103f7078ac4e180b255d948c8da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wordplate/plate/zipball/fd2e50cd3de67e90391e856f82ac10e8e7ae7686",
-                "reference": "fd2e50cd3de67e90391e856f82ac10e8e7ae7686",
+                "url": "https://api.github.com/repos/wordplate/plate/zipball/4ed5ab1207cd6103f7078ac4e180b255d948c8da",
+                "reference": "4ed5ab1207cd6103f7078ac4e180b255d948c8da",
                 "shasum": ""
             },
             "require": {
@@ -1833,7 +1833,7 @@
                 "wordplate",
                 "wordpress"
             ],
-            "time": "2018-03-20T08:53:52+00:00"
+            "time": "2018-06-20T12:43:05+00:00"
         },
         {
             "name": "wpackagist-plugin/disable-embeds",
