@@ -70,6 +70,11 @@ header {
   }
 
   .dropdown-menu {
+    min-width: auto;
+    background-color: rgba(255,255,255,.95);
+    padding: 5px 10px;
+    margin-right: -10px;
+    border-radius: 3px;
     ul {
       display: block;
       li {

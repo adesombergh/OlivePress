@@ -67,8 +67,9 @@
             @yield('content')
         </main>
 
-        <footer>
-            <a href="{{ home_url() }}" id="the-olive">OLIVE NOIRE</a>
+        <footer id="footer">
+            <div :style="{ height: footerHeightInPixels }"></div>
+            <a href="{{ home_url() }}" id="the-olive" :style="{ fontSize: footerFontSizeInPixels }">OLIVE NOIRE</a>
         </footer>
     </div>
 
