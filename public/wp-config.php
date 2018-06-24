@@ -1,5 +1,4 @@
 <?php
-
 /*
  * This file is part of WordPlate.
  *
@@ -10,6 +9,11 @@
  */
 
 declare(strict_types=1);
+
+
+/** Enable W3 Total Cache */
+define('WP_CACHE', true); // Added by W3 Total Cache
+
 
 /*
 |--------------------------------------------------------------------------

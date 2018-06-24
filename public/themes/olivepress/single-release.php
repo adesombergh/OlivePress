@@ -1,9 +1,11 @@
 <?php
 use Carbon\Carbon;
+
+
+
 if ( have_posts() ) {
 
     while ( have_posts() ) : the_post();
-
     $artists = get_post_meta($post->ID, 'release_artists', 1);
     $the_artists = "";
     $the_artist_link = "";
@@ -16,20 +18,19 @@ if ( have_posts() ) {
         if (sizeof($artists)==1)
             $the_artist_link = get_permalink($artists[0]);
     }
-
-    // dd( get_post_meta($post->ID, 'release_purchase', 1) );
     bladerunner(
             'views.release',
             [
                 'the_title'     => $post->post_title,
                 'the_artists'   => $the_artists,
-                'the_pochette'  => get_post_meta($post->ID, 'release_pochette', 1),
+                'the_pochette'  => wp_get_attachment_image_url( get_post_meta($post->ID, 'release_pochette_id', 1), 'large'),
                 'the_date'      => get_post_meta($post->ID, 'release_date', 1),
                 'the_formats'   => get_post_meta($post->ID, 'release_formats', 1),
                 'the_index'     => get_post_meta($post->ID, 'release_index', 1),
                 'the_texte'     => get_post_meta($post->ID, 'release_texte', 1),
                 'the_tracks'    => get_post_meta($post->ID, 'release_tracks', 1),
                 'the_links'     => get_post_meta($post->ID, 'release_purchase', 1),
+                'the_extras'    => get_post_meta($post->ID, 'release_extras', 1),
                 'the_artist_link' => $the_artist_link,
             ]
         );

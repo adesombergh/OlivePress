@@ -12,13 +12,11 @@ if ( have_posts() ) {
         }
     }
 
-
-
     $the_releases[] = [
         'the_title'     => $post->post_title,
         'the_artists'   => $the_artists,
         'the_date'      => get_post_meta($post->ID, 'release_date', 1),
-        'the_pochette'  => get_post_meta($post->ID, 'release_pochette', 1),
+        'the_pochette'  => wp_get_attachment_image_url( get_post_meta($post->ID, 'release_pochette_id', 1), 'large'),
         'the_link'      => get_permalink()
     ];
     endwhile; // End of the loop.

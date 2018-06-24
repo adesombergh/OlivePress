@@ -46,43 +46,6 @@
     <div class="separator">
         <div class="black-bar"></div>
     </div>
-    {{-- <div class="extras">
-        <div class="columns is-multiline">
-            <div class="column is-4">
-                <div class="iframe-wrapper">
-                    <iframe src="https://player.vimeo.com/video/222163862?color=ffffff" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="column is-4">
-                <div class="iframe-wrapper">
-                    <iframe src="https://www.youtube.com/embed/NUbqNxcU8cY?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-                </div>
-            </div>
-            <div class="column is-4">
-                <div class="iframe-wrapper">
-                    <figure class="image">
-                        <img src="http://localhost:3000/uploads/2018/06/radio_amoon_cover_240416.jpg">
-                    </figure>
-                </div>
-            </div>
-            <div class="column is-6">
-                <div class="iframe-wrapper">
-                    <iframe src="https://www.youtube.com/embed/NUbqNxcU8cY?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-                </div>
-            </div>
-            <div class="column is-6">
-                <div class="iframe-wrapper">
-                    <iframe src="https://www.youtube.com/embed/NUbqNxcU8cY?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-                </div>
-            </div>
-            <div class="column is-12">
-                <div class="iframe-wrapper">
-                    <iframe src="https://www.youtube.com/embed/NUbqNxcU8cY?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-                </div>
-            </div>
-
-        </div>
-    <div> --}}
     @if($the_extras)
     <div class="extras">
         <div class="columns is-multiline">
@@ -96,47 +59,20 @@
         </div>
     <div>
     @endif
-    {{-- <div class="extras">
-        <div class="tile is-ancestor">
-            <div class="tile is-vertical">
-                <div class="tile">
-                    <div class="tile is-parent is-vertical">
-                        <article class="tile is-child">
-                            <div class="iframe-wrapper">
-                                <iframe src="https://www.youtube.com/embed/NUbqNxcU8cY?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-                            </div>
-                        </article>
-                        <article class="tile is-child">
-                            <div class="iframe-wrapper">
-                                <iframe src="https://www.youtube.com/embed/Z9IODJdi3GA?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child">
-                            <figure class="image">
-                                <img src="http://localhost:3000/uploads/2018/06/radio_amoon_cover_240416.jpg">
-                            </figure>
-                        </article>
-                    </div>
-                </div>
-                <div class="tile is-parent">
-                    <article class="tile is-child">
-                        <div class="iframe-wrapper">
-                            <iframe src="https://www.youtube.com/embed/JrVKSKQKO1c?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </div> --}}
     @if($the_releases)
     <div class="releases-artist">
         <h3>RELEASES</h3>
         <div class="releases">
             @foreach($the_releases as $release)
             <a href="{{ $release['the_link'] }}">
-                <div class="img"><img src="{{ $release['the_pochette'] }}" alt="alt"></div>
+                <div class="img">
+                    @component('picture')
+                        @slot('alt')
+                            {{ $release['the_title'] }}
+                        @endslot
+                        {{ $release['the_pochette'] }}
+                    @endcomponent
+                </div>
                 <p class="caption">{{ $release['the_title'] }}</p>
             </a>
             @endforeach
@@ -144,4 +80,7 @@
     </div>
     @endif
 </div>
+@endsection
+@section('description')
+Olive Noire. Label de musique indépendant. Artiste: {{ $the_title }}.
 @endsection

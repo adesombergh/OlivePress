@@ -88,3 +88,4 @@ function disable_new_posts($a) {
     }
 }
 add_action('admin_menu', 'disable_new_posts');
+

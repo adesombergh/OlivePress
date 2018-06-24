@@ -22,3 +22,6 @@
     </div>
 </div>
 @endsection
+@section('description')
+Olive Noire. Label de musique indépendant. A propos de nous.
+@endsection

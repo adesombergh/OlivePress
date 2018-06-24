@@ -5,7 +5,12 @@
 <div class="container release">
     @if($the_pochette)
     <div class="pochette">
-        <img src="{{ $the_pochette }}" alt="Pochette">
+        @component('picture')
+            @slot('alt')
+                Pochette
+            @endslot
+            {{ $the_pochette }}
+        @endcomponent
     </div>
     @endif
     <h2>{{ $the_title }} by {{ $the_artists }}</h2>
@@ -28,42 +33,19 @@
         </ol>
     </div>
     @endif
-    {{--  <div class="extras">
-        <div class="tile is-ancestor">
-            <div class="tile is-vertical">
-                <div class="tile">
-                    <div class="tile is-parent is-vertical">
-                        <article class="tile is-child notification is-primary">
-                            <p class="title">Je suis</p>
-                            <p class="subtitle">vidéo</p>
-                        </article>
-                        <article class="tile is-child notification is-warning">
-                            <p class="title">Je suis</p>
-                            <p class="subtitle">hyperlien</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child notification is-info">
-                            <p class="title">Je suis</p>
-                            <p class="subtitle">image</p>
-                            <figure class="image is-4by3">
-                                <img src="https://bulma.io/images/placeholders/640x480.png">
-                            </figure>
-                        </article>
-                    </div>
-                </div>
-                <div class="tile is-parent">
-                    <article class="tile is-child notification is-danger">
-                        <p class="title">Je suis</p>
-                        <p class="subtitle">ton père</p>
-                        <div class="content">
-                        <!-- Content -->
-                        </div>
-                    </article>
-                </div>
+    @if($the_extras)
+    <div class="extras">
+        <div class="columns is-multiline">
+            @foreach($the_extras as $extra)
+            <div class="column is-6">
+                <article class="external">
+                    {!! wp_oembed_get($extra) !!}
+                </article>
             </div>
+            @endforeach
         </div>
-    </div>  --}}
+    <div>
+    @endif
     @if($the_links)
     <div class="buy">
         <h3>PURCHASE</h3>
@@ -83,4 +65,7 @@
     @endif
 </div>
 
+@endsection
+@section('description')
+Olive Noire. Label de musique indépendant. Release: {{ $the_title }}. Artistes: {{ $the_artists }}. Date: {{ $the_date }}. Formats:  {{ $the_formats }}
 @endsection

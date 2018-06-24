@@ -6,7 +6,14 @@
     <div class="releases">
         @foreach($the_releases as $release)
         <a href="{{ $release['the_link'] }}">
-            <div class="img"><img src="{{ $release['the_pochette'] }}" alt="alt"></div>
+            <div class="img">
+                @component('picture')
+                    @slot('alt')
+                        {{ $release['the_title'] }} by {{ $release['the_artists'] }}
+                    @endslot
+                    {{ $release['the_pochette'] }}
+                @endcomponent
+            </div>
             <p class="caption">‘’{{ $release['the_title'] }}’’ <span>by {{ $release['the_artists'] }} {{ $release['the_date'] }}</span></p>
         </a>
         @endforeach
@@ -14,4 +21,8 @@
 
 </div>
 
+@endsection
+
+@section('description')
+Olive Noire. Label de musique indépendant. Tous nos releases, CDs, Albums, Vinyles etc...
 @endsection

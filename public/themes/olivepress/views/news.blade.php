@@ -6,7 +6,12 @@
         <div class="item big">
             <a href="{{ $the_une['the_link'] }}">
                 <figure>
-                    <img src="{{ $the_une['the_caption'] }}" alt="">
+                    @component('picture')
+                        @slot('alt')
+                            {{ $the_une['the_title'] }}
+                        @endslot
+                        {{ $the_une['the_caption'] }}
+                    @endcomponent
                     <figcaption>{{ $the_une['the_title'] }}
                         <p>
                                 {{ $the_une['the_subtitle'] }}
@@ -19,7 +24,12 @@
         <div class="item">
             <a href="{{ $news['the_link'] }}">
                 <figure>
-                    <img src="{{ $news['the_caption'] }}" alt="">
+                    @component('picture')
+                        @slot('alt')
+                            {{ $news['the_title'] }}
+                        @endslot
+                        {{ $news['the_caption'] }}
+                    @endcomponent
                     <figcaption>{{ $news['the_title'] }}
                         <p>
                                 {{ $news['the_subtitle'] }}
@@ -29,4 +39,7 @@
         </div>
     @endforeach
 </div>
+@endsection
+@section('description')
+Olive Noire. Label de musique indépendant. Dernières nouvelles!
 @endsection

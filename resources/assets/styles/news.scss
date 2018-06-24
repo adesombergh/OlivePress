@@ -19,23 +19,23 @@
             }
             figcaption {
                 font-family: 'Encode Sans Semi Expanded', sans-serif;
-                font-weight: 400;            
+                font-weight: 400;
                 padding: 21px 5%;
                 font-size: 2vw;
                 line-height: 2vw;
                 @media screen and (max-width: $break-small) {
-                    font-size: .7rem;
-                    line-height: .7rem;
+                    font-size: .8rem;
+                    line-height: .8rem;
                 }
                 p {
                     font-family: 'Roboto', sans-serif;
-                    font-weight: 400;                
+                    font-weight: 400;
                     margin: 0;
                     padding-top: 5%;
                     font-size: 1vw;
                     @media screen and (max-width: $break-small) {
-                        font-size: .7rem;
-                        line-height: .7rem;
+                        font-size: .8rem;
+                        line-height: .8rem;
                     }
                 }
             }
@@ -52,8 +52,8 @@
                     p {
                         font-size: 1.5vw;
                         @media screen and (max-width: $break-small) {
-                            font-size: .7rem;
-                            line-height: .7rem;
+                            font-size: .8rem;
+                            line-height: .8rem;
                         }
                     }
                 }

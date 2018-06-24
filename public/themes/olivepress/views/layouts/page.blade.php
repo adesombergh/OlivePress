@@ -5,9 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="@yield('description')">
     <title>Olive Noire</title>
 
     <!-- Styles -->
+    <link rel="manifest" href="/manifest.json">
     <link href="{{ stylesheet_url('assets/styles/app.css') }}" rel="stylesheet">
 </head>
 
@@ -46,7 +48,7 @@
                 </ul>
             </nav>
             <div class="logo">
-                <a href="/"><img src="{{ stylesheet_url('assets/images/logo.svg') }}" alt=""></a>
+                <a href="/"><img src="{{ stylesheet_url('assets/images/logo.svg') }}" alt="Logo"></a>
             </div>
             <nav class="links links-center">
                 <ul>

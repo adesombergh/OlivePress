@@ -7,3 +7,6 @@
         @endforeach
     </ul>
 @endsection
+@section('description')
+Olive Noire. Label de musique indépendant. Liste de artistes membres.
+@endsection

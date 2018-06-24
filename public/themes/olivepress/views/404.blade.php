@@ -13,3 +13,6 @@
     </div>
 </div>
 @endsection
+@section('description')
+Olive Noire. Label de musique indépendant. 404 Page Not Found.
+@endsection

@@ -29,7 +29,7 @@ if ( have_posts() ) {
     foreach($releases as $release){
         $the_releases[] = array(
             'the_title'     => $release->post_title,
-            'the_pochette'  => get_post_meta($release->ID, 'release_pochette', 1),
+            'the_pochette'  => wp_get_attachment_image_url( get_post_meta($release->ID, 'release_pochette_id', 1), 'large'),
             'the_link'      => get_permalink($release->ID)
         );
     }
