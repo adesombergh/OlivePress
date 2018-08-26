@@ -35,6 +35,7 @@ mix.sass(`${resources}/styles/app.scss`, `${assetsPath}/styles`, {
     includePaths: ['node_modules']
 });
 
+mix.copyDirectory(`${resources}/images`,  `${assetsPath}/images`);
 // mix.sass(`${resources}/styles/editor-style.scss`, `${assetsPath}/styles`, {
 //     includePaths: ['node_modules']
 // });

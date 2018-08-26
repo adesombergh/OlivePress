@@ -82,5 +82,5 @@
 </div>
 @endsection
 @section('description')
-Olive Noire. Label de musique indépendant. Artiste: {{ $the_title }}.
+Olive Noire. Eclectic Brussels based artist run label. Artiste: {{ $the_title }}.
 @endsection

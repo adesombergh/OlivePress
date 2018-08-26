@@ -12,11 +12,27 @@
         font-weight: 800;
         margin: 140px auto;
     }
+    .info-header {
+        font-weight: 700;
+    }
+    text-align: center;
     .morceaux {
+        text-align: left;
         margin: 140px auto;
-        text-align: center;
+        display: inline-block;
         ol {
+            list-style: none;
+            counter-reset: item;
             display: inline-block;
+            li {
+                counter-increment: item;
+                font-weight: 400;
+                &:before {
+                    content: counter(item);
+                    font-weight: 200;
+                    padding-right: 10px;
+                }
+            }
         }
     }
     .extras {

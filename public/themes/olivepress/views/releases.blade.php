@@ -14,7 +14,7 @@
                     {{ $release['the_pochette'] }}
                 @endcomponent
             </div>
-            <p class="caption">‘’{{ $release['the_title'] }}’’ <span>by {{ $release['the_artists'] }} {{ $release['the_date'] }}</span></p>
+            <p class="caption">‘{{ $release['the_title'] }}’ <span>by {{ $release['the_artists'] }} {{ $release['the_date'] }}</span></p>
         </a>
         @endforeach
     </div>
@@ -24,5 +24,5 @@
 @endsection
 
 @section('description')
-Olive Noire. Label de musique indépendant. Tous nos releases, CDs, Albums, Vinyles etc...
+Olive Noire. Eclectic Brussels based artist run label. Tous nos releases, CDs, Albums, Vinyles etc...
 @endsection

@@ -1,13 +1,15 @@
 import Vue from "vue";
+import vNav from "./v-nav";
 
 import './booking';
 
 new Vue({
   el: '#app',
-
+  components: {
+    'v-nav' : vNav
+  },
   methods: {
     handleScroll (event) {
-      // console.log(this.footerHeight, this.footerFontSize);
       const el = document.scrollingElement || document.documentElement;
       let offset = el.scrollTop + window.innerHeight;
       let height = el.offsetHeight-10;
@@ -41,7 +43,9 @@ new Vue({
     footerFontSizeInPixels() {
       return this.footerFontSize + 'px'
     }
-  }
+  },
+  delimiters: ["#{","}"]
+
 })
 
 // require('intersection-observer')

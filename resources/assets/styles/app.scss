@@ -1,6 +1,6 @@
 @import "variables";
 @import "~bulma";
-@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:400,800|Roboto:200,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:400,800|Roboto:200,300,400,700|Oswald:700');
 
 * {
   box-sizing: border-box;
@@ -14,7 +14,6 @@ body {
   line-height: $line-height-base;
   box-sizing: border-box;
 }
-
 
 a {
   color: #020202;
@@ -39,8 +38,14 @@ main {
 footer {
   text-align: center;
   padding: 21px;
-  p {
+  position: relative;
+  a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin: 0;
+    white-space: nowrap;
   }
 }
 

@@ -8,5 +8,5 @@
     </ul>
 @endsection
 @section('description')
-Olive Noire. Label de musique indépendant. Liste de artistes membres.
+Olive Noire. Eclectic Brussels based artist run label. Liste de artistes membres.
 @endsection

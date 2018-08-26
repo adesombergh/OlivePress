@@ -21,9 +21,6 @@ header {
       justify-content: space-between;
       li {
         display: inline-block;
-        a:hover span {
-          color: #fff;
-        }
         a:hover.about {
           color: blue;
         }
@@ -57,17 +54,70 @@ header {
         margin-top:21px;
       }
     }
+
     &.links-center ul {
+      // border: 1px solid red;
+      position: relative;
       margin: 0 auto;
       width: 300px;
-      padding: 21px 7px;
-      border-bottom: 1px solid #020202;
+      padding: 0 7px;
+      transition: all ease-in-out 200ms;
+
       @include mobile {
         width: auto;
         padding: 7px 21px;
       }
+
+      > span {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #000000;
+        opacity: 1;
+        transition: all ease-in-out 200ms;
+      }
+
+      &.first > span {
+        left: 5%;
+        right: 95%;
+      }
+      &.second > span {
+        left: 50%;
+        right: 50%;
+      }
+      &.third > span {
+        left: 95%;
+        right: 5%;
+      }
+
+
+      > li {
+        // border: 1px solid green;
+        position: relative;
+        padding: 21px 0;
+
+        > span {
+          transition: all ease-in-out 200ms;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background-color: #000000;
+          opacity: 0;
+        }
+
+        &:hover > span {
+            opacity: 1;
+          }
+
+      }
+
     }
   }
+
 
   .dropdown-menu {
     min-width: auto;

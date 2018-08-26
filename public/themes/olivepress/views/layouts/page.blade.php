@@ -50,19 +50,19 @@
             <div class="logo">
                 <a href="/"><img src="{{ stylesheet_url('assets/images/logo.svg') }}" alt="Logo"></a>
             </div>
-            <nav class="links links-center">
-                <ul>
-                    <li>
-                        <a href="{{ home_url('news') }}">N<span>E</span>WS</a>
-                    </li>
-                    <li>
-                        <a href="{{ home_url('artist') }}"><span>A</span>RT<span>I</span>STS</a>
-                    </li>
-                    <li>
-                        <a href="{{ home_url('release') }}">R<span>E</span>L<span>EA</span>S<span>E</span>S</a>
-                    </li>
-                </ul>
-            </nav>
+
+            <v-nav inline-template homeurl="{{ home_url() }}">
+                <nav class="links links-center">
+                    <ul class="main-nav" :class="customClass">
+                        <li v-for="link in links" @mouseover="changeClass(link.customClass)" @mouseleave="changeClass('')">
+                            <a :href="link.href">#{link.title}</a>
+                            <span></span>
+                        </li>
+                        <span></span>
+                    </ul>
+                </nav>
+            </v-nav>
+
         </header>
 
         <main>

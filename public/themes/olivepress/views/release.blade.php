@@ -17,9 +17,9 @@
     <div class="columns">
         <div class="column is-3">
             <ul>
-                <li>INDEX: {{ $the_index }}</li>
-                <li>DATE: {{ $the_date }}</li>
-                <li>FORMAT(s):<br>{{ $the_formats }}</li>
+                <li><span class="info-header">INDEX:</span> {{ $the_index }}</li>
+                <li><span class="info-header">DATE:</span> {{ $the_date }}</li>
+                <li><span class="info-header">FORMAT(s):</span><br>{{ $the_formats }}</li>
             </ul>
         </div>
         <div class="column is-9">{{ $the_texte }}</div>
@@ -67,5 +67,5 @@
 
 @endsection
 @section('description')
-Olive Noire. Label de musique indépendant. Release: {{ $the_title }}. Artistes: {{ $the_artists }}. Date: {{ $the_date }}. Formats:  {{ $the_formats }}
+Olive Noire. Eclectic Brussels based artist run label. Release: {{ $the_title }}. Artistes: {{ $the_artists }}. Date: {{ $the_date }}. Formats:  {{ $the_formats }}
 @endsection

@@ -14,5 +14,5 @@
 </div>
 @endsection
 @section('description')
-Olive Noire. Label de musique indépendant. 404 Page Not Found.
+Olive Noire. - Eclectic Brussels based artist run label. 404 Page Not Found.
 @endsection

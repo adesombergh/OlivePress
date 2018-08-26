@@ -23,5 +23,5 @@
 </div>
 @endsection
 @section('description')
-Olive Noire. Label de musique indépendant. A propos de nous.
+Olive Noire. Eclectic Brussels based artist run label. A propos de nous.
 @endsection
